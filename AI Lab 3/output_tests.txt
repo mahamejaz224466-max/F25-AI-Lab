@@ -1,0 +1,19 @@
+Test 1: start equals goal (A to A)
+BFS: ['A']
+DFS: ['A']
+DLS limit 0: ('FOUND', ['A'])
+UCS: (['A'], 0)
+
+Test 2: unreachable goal (A to H)
+BFS: None
+DFS: None
+DLS limit 3: ('FAILURE', None)
+IDDFS max 3: ('FAILURE', None, [0, 1])
+UCS: (None, None)
+
+Test 3: graph with a cycle (A to C)
+BFS: ['A', 'B', 'C']
+DFS: ['A', 'B', 'C']
+DLS limit 4: ('FOUND', ['A', 'B', 'C'])
+IDDFS max 4: ('FOUND', ['A', 'B', 'C'], [0, 1, 2])
+UCS: (['A', 'B', 'C'], 3)

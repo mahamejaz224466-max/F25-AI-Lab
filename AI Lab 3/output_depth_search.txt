@@ -1,0 +1,11 @@
+DLS from A to G
+limit 1 | CUTOFF | None
+limit 2 | CUTOFF | None
+limit 3 | FOUND | ['A', 'B', 'E', 'G']
+limit 4 | FOUND | ['A', 'B', 'E', 'G']
+
+IDDFS from A to G
+max depth 1 | CUTOFF | None | limits attempted [0, 1]
+max depth 2 | CUTOFF | None | limits attempted [0, 1, 2]
+max depth 3 | FOUND | ['A', 'B', 'E', 'G'] | limits attempted [0, 1, 2, 3]
+max depth 4 | FOUND | ['A', 'B', 'E', 'G'] | limits attempted [0, 1, 2, 3]

@@ -1,0 +1,19 @@
+Weighted graph (directed edges)
+A -> B cost 1
+A -> C cost 2
+B -> D cost 4
+B -> E cost 1
+C -> F cost 5
+C -> G cost 10
+E -> G cost 1
+
+UCS path: ['A', 'B', 'E', 'G']
+UCS reported cost: 3
+UCS independent cost check: 3
+UCS processing order (node, cost so far): [('A', 0), ('B', 1), ('C', 2), ('E', 2), ('G', 3)]
+UCS hops: 3
+
+BFS path: ['A', 'C', 'G']
+BFS cost: 12
+BFS processing order: ['A', 'B', 'C', 'D', 'E', 'F', 'G']
+BFS hops: 2
