@@ -1,0 +1,10 @@
+All checks passed
+
+Noisy test around 26C
+prev None  temp 25.9  target IDLE  SEND
+prev IDLE  temp 26.1  target COOL  SEND
+prev COOL  temp 25.9  target IDLE  SEND
+prev IDLE  temp 26.1  target COOL  SEND
+prev COOL  temp 25.9  target IDLE  SEND
+prev IDLE  temp 26.1  target COOL  SEND
+Commands sent: 6 out of 6 readings
