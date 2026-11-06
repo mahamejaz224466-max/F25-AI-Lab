@@ -1,0 +1,28 @@
+Test: pass
+  input    (score, docs, attendance, letter): (85, True, 90, True)
+  expected: Review
+  actual  : Review
+  reason  : all conditions met
+  result  : PASS
+
+Test: low _attendance
+  input    (score, docs, attendance, letter): (85, True, 60, True)
+  expected: Hold
+  actual  : Hold
+  reason  : attendance below 75%
+  result  : PASS
+
+Test: no _letter
+  input    (score, docs, attendance, letter): (85, True, 90, False)
+  expected: Hold
+  actual  : Hold
+  reason  : recommendation letter missing
+  result  : PASS
+
+Test: boundary
+  input    (score, docs, attendance, letter): (70, True, 75, True)
+  expected: Review
+  actual  : Review
+  reason  : all conditions met
+  result  : PASS
+
