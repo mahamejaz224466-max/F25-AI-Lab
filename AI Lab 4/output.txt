@@ -1,0 +1,68 @@
+Heuristic audit
+S h = 5 true remaining = 6 OK
+A h = 4 true remaining = 5 OK
+B h = 4 true remaining = 5 OK
+C h = 2 true remaining = 3 OK
+G h = 0 true remaining = 0 OK
+
+edge S->A: h(S) = 5 <= 1 + h(A) = 5 OK
+edge S->B: h(S) = 5 <= 4 + h(B) = 8 OK
+edge A->C: h(A) = 4 <= 2 + h(C) = 4 OK
+edge B->G: h(B) = 4 <= 5 + h(G) = 5 OK
+edge C->G: h(C) = 2 <= 3 + h(G) = 3 OK
+
+A* with supplied heuristic
+Path: ['S', 'A', 'C', 'G']
+Returned cost: 6
+Independent cost check: 6
+Processed nodes (node, g, h, f):
+   ('S', 0, 5, 5)
+   ('A', 1, 4, 5)
+   ('C', 3, 2, 5)
+   ('G', 6, 0, 6)
+Expanded nodes: ['S', 'A', 'C']
+Expansion count: 3
+Stale entries skipped: 0
+
+Frontier after each expansion (f, g, node)
+after expanding S : [(5, 1, 'A'), (8, 4, 'B')]
+after expanding A : [(5, 3, 'C'), (8, 4, 'B')]
+after expanding C : [(6, 6, 'G'), (8, 4, 'B')]
+
+UCS control (all h = 0)
+Path: ['S', 'A', 'C', 'G']
+Returned cost: 6
+Independent cost check: 6
+Processed nodes (node, g, h, f):
+   ('S', 0, 0, 0)
+   ('A', 1, 0, 1)
+   ('C', 3, 0, 3)
+   ('B', 4, 0, 4)
+   ('G', 6, 0, 6)
+Expanded nodes: ['S', 'A', 'C', 'B']
+Expansion count: 4
+Stale entries skipped: 0
+
+Comparison
+A* expansions: 3 | UCS expansions: 4
+
+Overestimate experiment: h(C) changed from 2 to 10 | true remaining cost of C = 3
+A* with h(C) = 10
+Path: ['S', 'B', 'G']
+Returned cost: 9
+Independent cost check: 9
+Processed nodes (node, g, h, f):
+   ('S', 0, 5, 5)
+   ('A', 1, 4, 5)
+   ('B', 4, 4, 8)
+   ('G', 9, 0, 9)
+Expanded nodes: ['S', 'A', 'B']
+Expansion count: 3
+Stale entries skipped: 0
+
+Original A*: cost 6 path ['S', 'A', 'C', 'G'] expansions 3
+Modified A*: cost 9 path ['S', 'B', 'G'] expansions 3
+
+Edge case tests
+Start equals goal: ['S'] 0
+Unreachable goal: None None
