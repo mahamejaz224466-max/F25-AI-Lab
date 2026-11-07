@@ -1,0 +1,21 @@
+Original order: [3, 5, 2, 9, 0, 7, 0, 0]
+Minimax value: 5 | leaves: 8
+
+Distinct child-swap orderings tried: 64
+All alpha-beta values equal minimax value: True
+Fewest leaves: 5 with order [3, 5, 9, 2, 0, 0, 0, 7]
+Most leaves  : 8 with order [7, 0, 0, 0, 9, 2, 5, 3]
+Leaves evaluated -> number of orderings: {5: 4, 6: 16, 7: 20, 8: 24}
+
+Selected orderings
+original [3, 5, 2, 9, 0, 7, 0, 0] | value 5 | leaves 8
+best found [3, 5, 9, 2, 0, 0, 0, 7] | value 5 | leaves 5
+    PRUNE at MAX node depth 2 index 1: alpha=9 >= beta=5
+    PRUNE at MIN node depth 1 index 1: alpha=5 >= beta=0
+worst found [7, 0, 0, 0, 9, 2, 5, 3] | value 5 | leaves 8
+
+Edge case tests
+Single leaf [4]: (4, 1) (4, 1)
+All equal [7]*8: (7, 8) (7, 5)
+1000 random 16-leaf trees: same value: True | alpha-beta never more leaves: True
+Average leaves saved per tree: 4.178

@@ -1,0 +1,12 @@
+Tree 1: padded 5.1 scores [3, 5, 2, 9, 0, 7, 0, 0]
+Minimax   : value 5 | leaves evaluated 8
+Alpha-beta: value 5 | leaves evaluated 8
+Same value: True
+Pruning events: none
+
+Tree 2: scores from 5.2 [3, 5, 2, 9, 3, 5, 2, 9]
+Minimax   : value 5 | leaves evaluated 8
+Alpha-beta: value 5 | leaves evaluated 6
+Same value: True
+Pruning events: ['PRUNE at MIN node depth 1 index 1: alpha=5 >= beta=5']
+
