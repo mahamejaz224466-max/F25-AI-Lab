@@ -1,0 +1,62 @@
+[
+  {
+    "query": "What evidence is needed for an illness extension?",
+    "doc": "handbook",
+    "evidence": "Students who experience illness may request an extension, but they must provide medical evidence before the original deadline.",
+    "split": "dev"
+  },
+  {
+    "query": "How can I regain access to a forgotten login?",
+    "doc": "it_help",
+    "evidence": "A forgotten account password can be reset by opening the login page and selecting the recovery link.",
+    "split": "dev"
+  },
+  {
+    "query": "What should I do if a delivered package is broken?",
+    "doc": "returns",
+    "evidence": "If a parcel arrives damaged, contact customer support within 48 hours of delivery. Attach clear photographs of the damaged item and its packaging.",
+    "split": "dev"
+  },
+  {
+    "query": "Can a contractor work from home?",
+    "doc": "workplace",
+    "evidence": "A contractor may work remotely only when the signed contract explicitly permits remote work.",
+    "split": "dev"
+  },
+  {
+    "query": "What should I check when a printer prints blank pages?",
+    "doc": "printer",
+    "evidence": "If a printer has power but produces blank pages, first check the ink or toner level. Next, run the printer cleaning utility from the device menu. Then print a test page and inspect the result.",
+    "split": "test"
+  },
+  {
+    "query": "How do I renew an expired API access token in version 2?",
+    "doc": "it_help",
+    "evidence": "In the example software version 2, an expired API token is renewed by sending POST /v2/token/refresh and including the refresh_token field.",
+    "split": "test"
+  },
+  {
+    "query": "How do I return an item when I changed my mind?",
+    "doc": "returns",
+    "evidence": "For a change of mind, unused items may be returned within 14 days under this fictional example.",
+    "split": "test"
+  },
+  {
+    "query": "What condition applies to employee remote work?",
+    "doc": "workplace",
+    "evidence": "Employees may request remote work when their manager approves the arrangement.",
+    "split": "test"
+  },
+  {
+    "query": "What are tomorrow's flight prices?",
+    "doc": null,
+    "evidence": null,
+    "split": "test"
+  },
+  {
+    "query": "Who won the football match yesterday?",
+    "doc": null,
+    "evidence": null,
+    "split": "test"
+  }
+]
